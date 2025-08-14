@@ -31,7 +31,14 @@
       "output": "dist"
     },
     "files": [
-      "**/*",
+      "main.js",
+      "renderer.js",
+      "database.js",
+      "index.html",
+      "styles.css",
+      "package.json",
+      "Unmeego.png",
+      "2f.png",
       "!node_modules/**/*",
       "node_modules/better-sqlite3/**/*",
       "node_modules/bindings/**/*",
