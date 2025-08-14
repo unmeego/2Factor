@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>2Factor Authenticator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <!-- Welcome Screen -->
+    <div id="welcomeScreen" class="screen active">
+      <div class="welcome-container">
+        <div class="logo-container">
+          <img src="Unmeego.png" alt="Unmeego" class="logo">
+        </div>
+        <div class="welcome-content">
+          <div class="welcome-text">
+            <h1 id="welcomeMessage">Welcome</h1>
+            <div class="beta-info">
+              <span class="beta-badge">BETA</span>
+              <span class="company">unmeego.com</span>
+            </div>
+            <div class="loading-dots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Screen -->
+    <div id="mainScreen" class="screen">
+      <div class="header">
+        <div class="header-left">
+          <button id="importBtn" class="import-btn">📥</button>
+          <button id="exportBtn" class="export-btn">📤</button>
+        </div>
+        <h1>Authenticator</h1>
+        <button id="addAccountBtn" class="add-btn">+</button>
+      </div>
+      
+      <div class="content">
+        <div id="accountsList" class="accounts-list"></div>
+        <div id="emptyState" class="empty-state">
+          <div class="empty-icon">🔐</div>
+          <h3>No accounts yet</h3>
+          <p>Tap + to add your first account</p>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="timer-container">
+          <div class="timer-label">Next refresh in</div>
+          <div id="countdown" class="countdown">30</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add Account Screen -->
+    <div id="addScreen" class="screen">
+      <div class="header">
+        <button id="backBtn" class="back-btn">‹</button>
+        <h2>Add Account</h2>
+        <div class="spacer"></div>
+      </div>
+      
+      <div class="content">
+        <div class="form-container">
+          <div class="input-group">
+            <label>Account Name</label>
+            <input type="text" id="accountName" placeholder="e.g. Google, GitHub">
+          </div>
+          <div class="input-group">
+            <label>Secret Key</label>
+            <input type="text" id="secretKey" placeholder="Enter your secret key">
+          </div>
+          <div class="button-group">
+            <button id="cancelBtn" class="secondary-btn">Cancel</button>
+            <button id="addBtn" class="primary-btn">Add Account</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

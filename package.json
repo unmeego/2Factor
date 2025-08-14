@@ -1,0 +1,59 @@
+{
+  "name": "2factor-authenticator",
+  "version": "1.0.0",
+  "description": "Two-factor authentication application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "build": "electron-builder",
+    "dist": "electron-builder --publish=never"
+  },
+  "author": "Tu Nombre",
+  "dependencies": {
+    "@otplib/preset-default": "^12.0.1",
+    "better-sqlite3": "^9.2.2",
+    "bindings": "^1.5.0",
+    "file-uri-to-path": "^2.0.0",
+    "jshashes": "^1.0.8",
+    "otplib": "^12.0.1",
+    "thirty-two": "^1.0.2"
+  },
+  "devDependencies": {
+    "electron": "^27.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.2factor.authenticator",
+    "productName": "2Factor Authenticator",
+    "icon": "2f.png",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*",
+      "!node_modules/**/*",
+      "node_modules/better-sqlite3/**/*",
+      "node_modules/bindings/**/*",
+      "node_modules/file-uri-to-path/**/*",
+      "node_modules/otplib/**/*",
+      "node_modules/@otplib/**/*",
+      "node_modules/thirty-two/**/*",
+      "node_modules/jshashes/**/*"
+    ],
+    "asarUnpack": [
+      "node_modules/better-sqlite3/**/*",
+      "node_modules/bindings/**/*",
+      "node_modules/file-uri-to-path/**/*"
+    ],
+    "mac": {
+      "target": "dmg"
+    },
+    "win": {
+      "target": "portable"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  }
+}
