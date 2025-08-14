@@ -10,7 +10,7 @@
 [![Platform](https://img.shields.io/badge/platform-macOS-blue.svg)](https://www.apple.com/macos/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-[📥 Download for macOS](#download) • [✨ Features](#features) • [🚀 Quick Start](#quick-start) • [🌐 Website](https://unmeego.com)
+[📥 Download for macOS](#download) • [📸 Screenshots](#screenshots) • [✨ Features](#features) • [🚀 Quick Start](#quick-start) • [🌐 Website](https://unmeego.com)
 
 </div>
 
@@ -53,6 +53,23 @@
 | 🗃️ **Local Storage** | Secure SQLite database keeps your data private |
 | 🎯 **Zero Setup** | Works immediately - no accounts or configuration needed |
 | 🚀 **Lightweight** | Small footprint, fast startup |
+
+---
+
+## 📸 Screenshots
+
+<div align="center">
+
+### Welcome Screen
+![Welcome Screen](1.png)
+
+### Main Interface
+![Main Interface](2.png)
+
+### Add Account
+![Add Account](3.png)
+
+</div>
 
 ---
 
