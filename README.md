@@ -84,46 +84,70 @@
 
 ## 🚀 Quick Start
 
-### 1. **Install the App**
-- Download the DMG file above
-- Drag to Applications folder
-- Launch 2Factor Authenticator
+### 1. **Download & Install**
+- Download and extract the ZIP file above
+- Open the DMG file
+- Drag "2Factor Authenticator" to Applications folder
 
-### 2. **Add Your First Account**
+### 2. **First Launch (Important!)**
+**Option A - Right Click Method:**
+- Go to Applications folder
+- **Right-click** on "2Factor Authenticator"
+- Select **"Open"** from the menu
+- Click **"Open"** when macOS shows security warning
+
+**Option B - Terminal Method:**
+```bash
+sudo xattr -rd com.apple.quarantine "/Applications/2Factor Authenticator.app"
+```
+*This removes the quarantine flag from unsigned apps*
+
+### 3. **Add Your First Account**
 - Click the **+** button
 - Enter account name (e.g., "Google", "GitHub")
 - Paste your secret key
 - Click **Add Account**
 
-### 3. **Get Secret Keys**
+### 4. **Get Secret Keys**
 When setting up 2FA on any service:
 1. Look for **"Set up authenticator app"**
 2. Choose **"Can't scan QR code?"** or **"Manual entry"**
 3. Copy the secret key shown
 4. Paste it in our app
 
-### 4. **Use Your Codes**
+### 5. **Use Your Codes**
 - Codes refresh automatically every 30 seconds
 - Click any code to copy to clipboard
 - Use the copied code to log in
 
-### 5. **Backup & Migration**
-- Click **↑** to export all accounts as JSON
-- Click **↓** to import accounts from JSON file
+### 6. **Backup & Migration**
+- Click **📤** to export all accounts as JSON
+- Click **📥** to import accounts from JSON file
 - Perfect for device migration or backup
+
+---
+
+## ⚠️ Security Notice
+
+This app is **unsigned** because we don't have an Apple Developer certificate ($99/year). The "damaged app" warning is macOS protecting you from unsigned software.
+
+**The app is safe because:**
+- ✅ **Open source** - you can verify the code
+- ✅ **No network access** - works completely offline  
+- ✅ **Local storage only** - your data never leaves your device
 
 ---
 
 ## 📦 Backup & Migration
 
 ### 📤 **Export Your Accounts**
-- Click the **↑** button in the top-left corner
+- Click the **📤** button in the top-left corner
 - Downloads `2factor-accounts.json` with all your accounts
 - **Safe to share** - contains encrypted secrets only
 - Perfect for **device migration** or **backup**
 
 ### 📥 **Import Accounts**
-- Click the **↓** button in the top-left corner
+- Click the **📥** button in the top-left corner
 - Select your JSON backup file
 - **Automatically adds** all valid accounts
 - **No duplicates** - safely import multiple times
