@@ -76,7 +76,7 @@
 ## 📥 Download
 
 ### For macOS (Apple Silicon)
-**[⬇️ Download 2Factor Authenticator v1.0.0-beta](dist/2Factor%20Authenticator-1.0.0-arm64.dmg)**
+**[⬇️ Download 2Factor Authenticator v1.0.0-beta](2Factor%20Authenticator-1.0.0-arm64.dmg.zip)**
 
 *Requires macOS 10.12+ • Apple Silicon (M1/M2/M3) optimized*
 
@@ -215,7 +215,7 @@ MIT License - feel free to use, modify, and distribute.
 
 **Made with ❤️ by [Unmeego](https://unmeego.com)**
 
-[📥 Download Now](#download) • [🌐 Visit Website](https://unmeego.com) • [📧 Contact Us](mailto:hello@unmeego.com)
+[📥 Download Now](2Factor%20Authenticator-1.0.0-arm64.dmg.zip) • [🌐 Visit Website](https://unmeego.com) • [📧 Contact Us](mailto:hello@unmeego.com)
 
 ---
 
