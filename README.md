@@ -45,6 +45,9 @@
 | Feature | Description |
 |---------|-------------|
 | 🔢 **TOTP Codes** | Generate secure 6-digit codes compatible with all services |
+| 📷 **QR Scanner** | Live camera scanning + image upload for QR codes |
+| 🔄 **Google Authenticator Import** | Direct migration from Google Authenticator export QR |
+| ✏️ **Edit Accounts** | Modify existing account names and secrets |
 | 📤 **Import/Export** | Backup and restore accounts with JSON files |
 | 🌍 **Multi-language Welcome** | Supports 7 languages: English, Spanish, Korean, Chinese, German, French, Hindi |
 | 📱 **Mobile-First Design** | Beautiful interface inspired by modern mobile apps |
@@ -102,27 +105,40 @@ sudo xattr -rd com.apple.quarantine "/Applications/2Factor Authenticator.app"
 ```
 *This removes the quarantine flag from unsigned apps*
 
+### 3. **Camera Permissions (for QR scanning)**
+- When first using QR scanner, allow camera access
+- Go to **System Preferences → Security & Privacy → Camera**
+- Enable "2Factor Authenticator" if needed
+
 ### 3. **Add Your First Account**
+
+**Option A - QR Code Scanning:**
+- Click the **+** button
+- Click **📷 Scan QR Code** for live camera
+- Point camera at QR code → Auto-fills fields
+- Click **Add Account**
+
+**Option B - Manual Entry:**
 - Click the **+** button
 - Enter account name (e.g., "Google", "GitHub")
 - Paste your secret key
 - Click **Add Account**
 
-### 4. **Get Secret Keys**
-When setting up 2FA on any service:
-1. Look for **"Set up authenticator app"**
-2. Choose **"Can't scan QR code?"** or **"Manual entry"**
-3. Copy the secret key shown
-4. Paste it in our app
+**Option C - Google Authenticator Migration:**
+- Click **📷** button in main screen
+- Upload Google Authenticator export QR image
+- All accounts imported automatically!
 
-### 5. **Use Your Codes**
-- Codes refresh automatically every 30 seconds
-- Click any code to copy to clipboard
-- Use the copied code to log in
+### 4. **Manage Your Accounts**
+- **✏️ Edit** - Modify account name or secret
+- **×** Delete - Remove unwanted accounts
+- **Click code** - Copy to clipboard instantly
+- Codes refresh every 30 seconds automatically
 
-### 6. **Backup & Migration**
-- Click **📤** to export all accounts as JSON
-- Click **📥** to import accounts from JSON file
+### 5. **Backup & Migration**
+- **📤 Export** - Save all accounts as JSON backup
+- **📥 Import** - Restore from JSON file
+- **📷 QR Import** - Migrate from other authenticator apps
 - Perfect for device migration or backup
 
 ---
@@ -152,9 +168,21 @@ This app is **unsigned** because we don't have an Apple Developer certificate ($
 - **Automatically adds** all valid accounts
 - **No duplicates** - safely import multiple times
 
+### 📷 **QR Code Migration**
+- **From Google Authenticator:**
+  1. Open Google Authenticator → Settings → Transfer accounts → Export accounts
+  2. Save the QR code as image
+  3. In our app: Click **📷** → Upload image
+  4. All accounts imported with format: `Service (email@domain.com)`
+
+- **Individual QR codes:**
+  1. Use **📷 Scan QR Code** in Add Account screen
+  2. Point camera at any TOTP QR code
+  3. Fields auto-fill → Click Add Account
+
 ### 🔄 **Migration Made Easy**
-1. **Export** from your old device/app
-2. **Transfer** the JSON file
+1. **Export** from your old device/app (JSON or QR)
+2. **Transfer** the file or scan QR
 3. **Import** on your new device
 4. **Done!** All codes working instantly
 
@@ -162,11 +190,13 @@ This app is **unsigned** because we don't have an Apple Developer certificate ($
 
 ## 🎯 Perfect For
 
+- **Google Authenticator users** wanting to migrate to a better app
 - **Developers** managing multiple GitHub, AWS, and service accounts
-- **Security-conscious users** who want offline 2FA
+- **Security-conscious users** who want offline 2FA with QR scanning
 - **macOS enthusiasts** who appreciate beautiful native apps
-- **Teams** looking for a reliable, private 2FA solution
-- **Anyone** tired of cluttered, slow authenticator apps
+- **Teams** looking for a reliable, private 2FA solution with easy migration
+- **Anyone** tired of cluttered, slow authenticator apps without QR support
+- **Users** who want to edit and organize their 2FA accounts properly
 
 ---
 
