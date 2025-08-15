@@ -36,6 +36,7 @@
         <div class="header-left">
           <button id="importBtn" class="import-btn">📥</button>
           <button id="exportBtn" class="export-btn">📤</button>
+          <button id="importQrBtn" class="import-btn">📷</button>
         </div>
         <h1>Authenticator</h1>
         <button id="addAccountBtn" class="add-btn">+</button>
@@ -75,6 +76,14 @@
           <div class="input-group">
             <label>Secret Key</label>
             <input type="text" id="secretKey" placeholder="Enter your secret key">
+            <button type="button" id="scanQrBtn" class="scan-btn">📷 Scan QR Code</button>
+          </div>
+          <div id="qrScanner" class="qr-scanner hidden">
+            <video id="qrVideo" autoplay></video>
+            <div class="scanner-overlay">
+              <div class="scanner-frame"></div>
+            </div>
+            <button id="stopScanBtn" class="stop-scan-btn">Stop Scanning</button>
           </div>
           <div class="button-group">
             <button id="cancelBtn" class="secondary-btn">Cancel</button>

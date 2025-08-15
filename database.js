@@ -47,6 +47,11 @@ class DatabaseManager {
     const stmt = this.db.prepare('DELETE FROM accounts WHERE id = ?');
     return stmt.run(id);
   }
+  
+  updateAccount(account) {
+    const stmt = this.db.prepare('UPDATE accounts SET name = ?, secret = ?, issuer = ? WHERE id = ?');
+    return stmt.run(account.name, account.secret, account.issuer || '', account.id);
+  }
 }
 
 module.exports = DatabaseManager;

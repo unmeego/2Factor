@@ -15,12 +15,34 @@ function createWindow() {
     alwaysOnTop: false,
     webPreferences: {
       nodeIntegration: true,
-      contextIsolation: false
+      contextIsolation: false,
+      webSecurity: false,
+      allowRunningInsecureContent: true,
+      experimentalFeatures: true
     }
   });
+  
+  // Enable camera permissions
+  mainWindow.webContents.session.setPermissionRequestHandler((webContents, permission, callback) => {
+    callback(true); // Allow all permissions
+  });
+  
+  // Override navigator.mediaDevices for camera access
+  mainWindow.webContents.executeJavaScript(`
+    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+      const originalGetUserMedia = navigator.mediaDevices.getUserMedia.bind(navigator.mediaDevices);
+      navigator.mediaDevices.getUserMedia = function(constraints) {
+        console.log('getUserMedia called with:', constraints);
+        return originalGetUserMedia(constraints);
+      };
+    }
+  `);
 
   console.log('Loading HTML file...');
   mainWindow.loadFile('index.html');
+  
+  // Set user agent to avoid camera restrictions
+  mainWindow.webContents.setUserAgent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36');
   
   mainWindow.once('ready-to-show', () => {
     console.log('Window ready to show');
@@ -85,4 +107,16 @@ ipcMain.handle('add-account', async (event, account) => {
 
 ipcMain.handle('delete-account', async (event, id) => {
   return await db.deleteAccount(id);
+});
+
+ipcMain.handle('update-account', async (event, account) => {
+  console.log('IPC update-account called with:', account);
+  try {
+    const result = await db.updateAccount(account);
+    console.log('Database update result:', result);
+    return result;
+  } catch (error) {
+    console.error('Database update error:', error);
+    throw error;
+  }
 });
