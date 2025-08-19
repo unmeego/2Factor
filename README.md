@@ -10,7 +10,7 @@
 [![Platform](https://img.shields.io/badge/platform-macOS-blue.svg)](https://www.apple.com/macos/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-[📥 Download for macOS](#download) • [📸 Screenshots](#screenshots) • [✨ Features](#features) • [🚀 Quick Start](#quick-start) • [🌐 Website](https://unmeego.com)
+[📥 Download for macOS](#download) • [📸 Screenshots](#screenshots) • [✨ Features](#features) • [🚀 Quick Start](#quick-start) • [🌐 Website](https://2fa.unmeego.com)
 
 </div>
 
@@ -79,7 +79,7 @@
 ## 📥 Download
 
 ### For macOS (Apple Silicon)
-**[⬇️ Download 2Factor Authenticator v1.0.0-beta](2Factor%20Authenticator-1.0.0-arm64.dmg.zip)**
+**[⬇️ Download 2Factor Authenticator v1.0.0-beta](https://2fa.unmeego.com/2Factor%20Authenticator-1.0.0-arm64.dmg)**
 
 *Requires macOS 10.12+ • Apple Silicon (M1/M2/M3) optimized*
 
@@ -224,10 +224,10 @@ Works with **any service** that supports TOTP/2FA:
 
 ## 🏢 About Unmeego
 
-**2Factor Authenticator** is crafted with ❤️ by [Unmeego](https://unmeego.com) - we build beautiful, privacy-focused software for modern workflows.
+**2Factor Authenticator** is crafted with ❤️ by [Unmeego](https://2fa.unmeego.com) - we build beautiful, privacy-focused software for modern workflows.
 
 ### 🌟 More from Unmeego
-- Visit [unmeego.com](https://unmeego.com) for more apps
+- Visit [2fa.unmeego.com](https://2fa.unmeego.com) for more apps
 - Follow us for updates on new releases
 - Join our community of privacy-focused users
 
@@ -267,9 +267,9 @@ MIT License - feel free to use, modify, and distribute.
 
 <div align="center">
 
-**Made with ❤️ by [Unmeego](https://unmeego.com)**
+**Made with ❤️ by [Unmeego](https://2fa.unmeego.com)**
 
-[📥 Download Now](2Factor%20Authenticator-1.0.0-arm64.dmg.zip) • [🌐 Visit Website](https://unmeego.com) • [📧 Contact Us](mailto:hello@unmeego.com)
+[📥 Download Now](https://2fa.unmeego.com/2Factor%20Authenticator-1.0.0-arm64.dmg) • [🌐 Visit Website](https://2fa.unmeego.com) • [📧 Contact Us](mailto:hello@unmeego.com)
 
 ---
 
